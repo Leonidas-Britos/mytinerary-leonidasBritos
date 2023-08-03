@@ -4,7 +4,7 @@
   padding: 32px 218px 399px 219px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 318px;
+  gap: 250px;
 }
 
 * {
@@ -15,8 +15,9 @@
 
 .headerHome {
   display: flex;
-  width: 1291px;
-  justify-content: space-between;
+  width: 1500px;
+  justify-content: space-around;
+  gap: 29rem;
   align-items: center;
 }
 
@@ -118,9 +119,49 @@
   line-height: normal;
 }
 
-.mountainImg {
-  color: lightgray;
-  width: 308px;
-  height: 200px;
+/*-------------------CAROUSEL-------------------*/
+
+.carouselHome {
+  /* border: solid 2px; */
+  background-color: rgba(211, 211, 211, 0.315);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 1.8rem;
+  gap: 3.5rem;
+  width: 900px;
+  height: 950px;
+}
+
+.carouselCard {
+  border: #1c1c1c solid 0.167rem;
+  border-radius: 1rem;
+  text-align: center;
+  height: 350px;
+}
+
+.carouselPhoto {
+  border-bottom: #1c1c1c solid 0.2rem;;
+  border-radius: 0.67rem 0.67rem 0 0;
+  width: 24rem;
+  height: 18rem;
+}
+
+.carouselCardCity {
+  color: #4f46e5;
+  font-family: "Segoe UI";
+  font-size: 1.9rem;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.arrowsCarousel {
+  height: 5rem;
+}
+
+.carouselArrows {
+  display: flex;
+  gap: 43rem;
 }
 

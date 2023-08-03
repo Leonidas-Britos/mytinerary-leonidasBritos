@@ -1,6 +1,6 @@
 import TittleH1 from "../components/home/TittleH1.JSX";
 import Text from "../components/home/Text";
-import Carousel from "../components/home/carousel";
+import Carousel from "../components/home/carousel/Carousel";
 import ButtonViewMore from "../components/home/ButtonViewMore";
 
 export default function ContentHome() {
