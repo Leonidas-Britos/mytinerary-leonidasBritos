@@ -1,6 +1,6 @@
 import "./App.css";
 import MainLayout from "./layouts/MainLayout";
-import ContentHome from "./components/ContentHome";
+import ContentHome from "./pages/ContentHome";
 
 function App() {
   return (

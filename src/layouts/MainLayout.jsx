@@ -1,4 +1,4 @@
-import NavBarAndBanner from "../components/NavBarAndBanner"
+import NavBarAndBanner from "./Header"
 
 export default function MainLayout() {
   return (
