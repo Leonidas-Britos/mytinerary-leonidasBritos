@@ -1,6 +1,5 @@
 import CarouselCard from "./CarouselCard"
-import ArrowLeft from "./ArrowLeft"
-import ArrowRight from "./ArrowRight"
+
 
 
 
@@ -29,8 +28,9 @@ export default function Carousel() {
     <div>
         <div className="carouselHome">
           {data.slice(0,4).map(each=> <CarouselCard key={each.id} src={each.photo} alt={each.id} text={each.city} />)}
-          <div className="carouselArrows">
-            <ArrowLeft /> <ArrowRight />
+          <div className="groupArrowsCarousel">
+              <img className="arrowCarousel" src="./public/arrows/arrow-left.png" alt="" /> 
+              <img className="arrowCarousel" src="./public/arrows/arrow-right.png" alt="" />
           </div>
         </div>   
     </div>
