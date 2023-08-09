@@ -46,6 +46,7 @@ main {
 
 .logoCompanyHeader {
   width: 38rem;
+  cursor: pointer;
 }
 
 /*-------------------NAV-------------------*/
@@ -65,9 +66,16 @@ main {
   text-decoration: none;
 }
 /*-------------------Button-------------------*/
+.buttonLogin:hover, .buttonCities:hover, .buttonHomeNav:hover {
+  background: #a97aff;
+}
+
+/* .textButtonLogin:hover, .textButtonHome:hover .textButtonCities:hover {
+  color: black;
+}  */
 /*---------login---------*/
 .buttonLogin {
-  border: solid 0.06em #fffffff8;
+  cursor: pointer;
   padding: 0 1% 0 1%;
   display: flex;
   font-size: 2.5rem;
@@ -76,7 +84,8 @@ main {
   justify-content: center;
   align-items: center;
   gap: 0.1em;
-  border-radius: 0.4em;
+  border: solid 0.06em #0d0d0d7e;
+  border-radius: 0.80rem;
   background: var(--prima, #4f46e5);
 }
 
@@ -96,7 +105,7 @@ main {
 
 /*---------cities---------*/
 .buttonCities {
-  border: solid 0.06em #fffffff8;
+  cursor: pointer;
   display: flex;
   font-size: 2.5rem;
   width: 6em;
@@ -104,8 +113,37 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 0.4em;
+  border: solid 0.06em #0d0d0d7e;
+  border-radius: 0.80rem;
   background: var(--prima, #4f46e5);
+  position: relative;
+}
+
+.buttonCities:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #e490b7, #bf63a4, #a64e98, rgba(255, 20, 145, 0.863), #bf63a4, #e490b7,#a64e98, rgba(255, 20, 145, 0.863));
+  background-size: 800%;
+  border-radius: 12px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 400% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
 }
 
 .iconCitiesnNav {
@@ -122,9 +160,11 @@ main {
   text-decoration: none;
 }
 
-/*---------cities---------*/
+/*---------home---------*/
 .buttonHomeNav {
-  border: solid 0.06em #fffffff8;
+  border: solid 0.06em #0d0d0d7e;
+  border-radius: 0.80rem;
+  cursor: pointer;
   display: flex;
   font-size: 2.5rem;
   width: 6em;
@@ -132,7 +172,6 @@ main {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 0.4em;
   background: var(--prima, #4f46e5);
 }
 
@@ -161,7 +200,7 @@ main {
 .textAndButtonHome {
   border: ridge 6px;
   border-radius: 1rem;
-  background-color: rgba(211, 211, 211, 0.158);
+  background-color: #d8bdff28;
   display: flex;
   height: 56vh;
   width: 41vw;
@@ -192,6 +231,7 @@ main {
 .buttonHome {
   border-radius: 8px;
   background: var(--prima, #4f46e5);
+  cursor: pointer;
   display: flex;
   width: 346px;
   padding: 16px 20px;
@@ -205,12 +245,16 @@ main {
   line-height: normal;
 }
 
+.buttonHome:hover {
+  background-color: #a97aff;
+}
+
 /*-------------------CAROUSEL-------------------*/
 
 .carouselHome {
   border: solid 0.2rem rgba(128, 128, 128, 0.541);
   border-radius: 0.6rem;
-  background-color: #d8bdff60;
+  background-color: #d8bdff28;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -334,3 +378,4 @@ hr {
   padding: 0 1% 0.5% 0;
 }
 
+/*----------------------------------------*/
