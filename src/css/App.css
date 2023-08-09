@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  width: 98.93vw;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+main {
+  background-color: rgba(211, 211, 211, 0.192);
+  padding: 6% 7% 0 7%;
+  margin-bottom: 80px;
+}
+
+/*-------------------HEADER-------------------*/
+.headerHome {
+  border-bottom: rgba(0, 0, 0, 0.233) solid 0.11em;
+  display: flex;
+  width: 98.93vw;
+  justify-content: space-between;
+  gap: 25rem;
+  align-items: center;
+  padding: 1% 7% 1% 7%;
+}
+
+.logoAndText {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+}
+
+.h3Header {
+  color: var(--black, #1c1c1c);
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.logoCompanyHeader {
+  width: 38rem;
+}
+
+/*-------------------NAV-------------------*/
+.navPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.anchorNav {
+  color: var(--black, #1c1c1c);
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.buttonLogin {
+  display: flex;
+  font-size: 2.5rem;
+  width: 4.2em;
+  height: 1.8em;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0.4em;
+  background: var(--prima, #4f46e5);
+}
+
+.iconLoginNav {
+  color: #ffffff;
+  width: 0.8em;
+}
+
+.textButtonLogin {
+  color: #fff;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/*-------------------HOME-------------------*/
+
+.contentHome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textAndButtonHome {
+  display: flex;
+  width: 40vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.tittleArticleHome {
+  color: var(--black, #1c1c1c);
+  font-family: Segoe UI;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.paragraphHome {
+  color: var(--grey-p, rgba(28, 28, 28, 0.6));
+  font-family: Segoe UI;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.buttonHome {
+  border-radius: 8px;
+  background: var(--prima, #4f46e5);
+  display: flex;
+  width: 346px;
+  padding: 16px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/*-------------------CAROUSEL-------------------*/
+
+.carouselHome {
+  border: solid 0.2rem rgba(128, 128, 128, 0.541);
+  border-radius: 0.6rem;
+  background-color: #d8bdff60;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0.8rem 1.8rem 0.4rem 2.2rem;
+  margin-bottom: 3rem;
+  gap: 3.2rem;
+  width: 44vw;
+  height: 99vh;
+}
+
+.carouselCard {
+  border: #1c1c1c62 solid 0.167rem;
+  border-radius: 1.5rem;
+  background-color: #ffffff;
+  text-align: center;
+  height: 22.6rem;
+}
+
+.carouselPhoto {
+  border-bottom: #1c1c1c solid 0.1rem;;
+  border-radius: 1.2rem 0.67rem 0 0;
+  width: 24rem;
+  height: 18rem;
+}
+
+.carouselCardCity {
+  color: #4f46e5;
+  font-family: "Segoe UI";
+  font-size: 2.3rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3px;
+}
+
+.arrowCarousel {
+  height: 5rem;
+}
+
+.groupArrowsCarousel {
+  flex-direction: row;
+  width: 51.8rem;
+  gap: 30rem;
+  display: flex;
+  justify-content: center;
+}
+
+/*-------------------FOOTER-------------------*/
+
+footer {
+  width: 98.93vw;
+}
+
+.myFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: spa;
+  background-color: #0d0d0d;
+  width: 98.93vw;
+  border: solid  #0d0d0d;
+}
+
+.footerSection1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30vh;
+}
+
+.logoCompany {
+  width: 30rem;
+  border-radius: 4%;
+}
+
+.groupLink1, .groupLink2, .groupLink3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.groupLink1:hover, .groupLink2:hover, .groupLink3:hover {
+  cursor: pointer;
+}
+
+hr {
+  padding: 0 1px 0;
+  width: 97.9w;
+}
+
+.footerSection2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socialNetworks{
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  height: 22vh;
+  padding-left: 40%;
+  
+}
+
+.pFooter {
+  color: white;
+  font-family: "Segoe UI";
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.iconFooter {
+  border: solid white 0.14rem;
+  border-radius: 70%;
+  background-color: #fff;
+  color: white;
+  width: 60px;
+}
+
+.copyrightFooter {
+  align-self: flex-end; 
+  color: white;
+  padding: 0 1% 0.5% 0;
+}
