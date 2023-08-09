@@ -1,5 +1,6 @@
-import "./App.css";
-import MainLayout from "./layouts/MainLayout";
+import "./css/App.css";
+import MainLayoutFooter from "./layouts/footer/MainLayoutFooter";
+import MainLayout from "./layouts/header/MainLayoutHeader";
 import ContentHome from "./pages/ContentHome";
 
 function App() {
@@ -11,6 +12,12 @@ function App() {
       <main>
         <ContentHome/>
       </main>
+      {/*Footer*/}
+      <footer>
+      <MainLayoutFooter></MainLayoutFooter>
+      </footer>
+      
+      
     </>
   );
 }
