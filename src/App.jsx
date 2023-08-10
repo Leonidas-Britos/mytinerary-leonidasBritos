@@ -1,7 +1,7 @@
 import "./css/App.css";
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
-import ContentHome from "./pages/ContentHome";
+import ContentHome from "./pages/Home";
 
 function App() {
   return (

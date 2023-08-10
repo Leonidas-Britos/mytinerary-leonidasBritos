@@ -91,7 +91,8 @@ main {
 
 .iconLoginNav {
   color: #ffffff;
-  height: 2.3em;
+  height: 1.4em;
+  margin-right:0.5rem;
 }
 
 .textButtonLogin {
@@ -127,7 +128,7 @@ main {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #e490b7, #bf63a4, #a64e98, rgba(255, 20, 145, 0.863), #bf63a4, #e490b7,#a64e98, rgba(255, 20, 145, 0.863));
+  background: linear-gradient(45deg, blue, red, #a64e98, lightblue, red, blue,#a64e98, lightblue);
   background-size: 800%;
   border-radius: 12px;
   filter: blur(8px);
@@ -146,10 +147,11 @@ main {
   }
 }
 
-.iconCitiesnNav {
+/* .iconCitiesnNav {
   color: #ffffff;
-  height: 1.3em;
-}
+  height: 0.2rem;
+  margin-right:0.2rem;
+} */
 
 .textButtonCities {
   color: #fff;
@@ -197,12 +199,19 @@ main {
   gap: 5.1rem; 
 }
 
+.imageHome {
+  border: solid 0.1rem lightgrey;
+  width: 90%;
+  height: 70%;
+}
+
 .textAndButtonHome {
+  align-items: center;
   border: ridge 6px;
   border-radius: 1rem;
   background-color: #d8bdff28;
   display: flex;
-  height: 56vh;
+  height: 106vh;
   width: 41vw;
   flex-direction: column;
   justify-content: center;
@@ -252,31 +261,34 @@ main {
 /*-------------------CAROUSEL-------------------*/
 
 .carouselHome {
-  border: solid 0.2rem rgba(128, 128, 128, 0.541);
-  border-radius: 0.6rem;
+  border: ridge 6px;
+  /* border: solid 0.2rem rgba(128, 128, 128, 0.541); */
+  border-radius: 1rem; 
   background-color: #d8bdff28;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  padding: 0.8rem 1.8rem 0.4rem 2.2rem;
+  padding: 4rem 1.8rem 0.4rem 2.2rem; 
   margin-bottom: 3rem;
   gap: 3.2rem;
   width: 44vw;
-  height: 99vh;
+  height: 106vh;
 }
 
 .carouselCard {
   border: #1c1c1c62 solid 0.167rem;
-  border-radius: 1.5rem;
+  /* border-radius: 1.5rem; */
   background-color: #ffffff;
   text-align: center;
-  height: 22.6rem;
+  height: 24.6rem;
+  width: 24rem;
+  padding: 1.5% 1.5% 0 1.5%;
 }
 
 .carouselPhoto {
-  border-bottom: #1c1c1c solid 0.1rem;;
-  border-radius: 1.2rem 0.67rem 0 0;
-  width: 24rem;
+  border: #1c1c1c2c solid 0.1rem;;
+  /* border-radius: 1.2rem 0.67rem 0 0; */
+  width: 22rem;
   height: 18rem;
 }
 
@@ -284,20 +296,17 @@ main {
   color: #4f46e5;
   font-family: "Segoe UI";
   font-size: 2.3rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3px;
-}
-
-.arrowCarousel {
-  height: 5rem;
+  padding-top: 1rem;
 }
 
 .groupArrowsCarousel {
   flex-direction: row;
+  height: 5.5rem;
   width: 51.8rem;
   gap: 30rem;
   display: flex;
   justify-content: center;
+  padding: 0 0 4rem 0;
 }
 
 /*-------------------FOOTER-------------------*/
