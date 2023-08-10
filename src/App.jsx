@@ -1,20 +1,20 @@
 import "./css/App.css";
-import MainLayoutFooter from "./layouts/footer/MainLayoutFooter";
-import MainLayout from "./layouts/header/MainLayoutHeader";
-import ContentHome from "./pages/ContentHome";
+import Footer from "./layouts/Footer";
+import Header from "./layouts/Header";
+import ContentHome from "./pages/Home";
 
 function App() {
   return (
     <>
       {/*Header*/}
-      <MainLayout> </MainLayout>
+      <Header> </Header>
       {/*Contenido exclusivo del home*/}
       <main>
         <ContentHome/>
       </main>
       {/*Footer*/}
       <footer>
-      <MainLayoutFooter></MainLayoutFooter>
+      <Footer></Footer>
       </footer>
       
       

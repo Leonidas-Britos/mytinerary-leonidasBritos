@@ -14,8 +14,7 @@
 
 main {
   background-color: rgba(211, 211, 211, 0.192);
-  padding: 6% 7% 0 7%;
-  margin-bottom: 80px;
+  padding: 6% 5% 7% 5%;
 }
 
 /*-------------------HEADER-------------------*/
@@ -47,6 +46,7 @@ main {
 
 .logoCompanyHeader {
   width: 38rem;
+  cursor: pointer;
 }
 
 /*-------------------NAV-------------------*/
@@ -54,7 +54,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 10px;
 }
 
 .anchorNav {
@@ -65,22 +65,34 @@ main {
   line-height: normal;
   text-decoration: none;
 }
+/*-------------------Button-------------------*/
+.buttonLogin:hover, .buttonCities:hover, .buttonHomeNav:hover {
+  background: #a97aff;
+}
 
+/* .textButtonLogin:hover, .textButtonHome:hover .textButtonCities:hover {
+  color: black;
+}  */
+/*---------login---------*/
 .buttonLogin {
+  cursor: pointer;
+  padding: 0 1% 0 1%;
   display: flex;
   font-size: 2.5rem;
-  width: 4.2em;
+  width: 6em;
   height: 1.8em;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  border-radius: 0.4em;
+  gap: 0.1em;
+  border: solid 0.06em #0d0d0d7e;
+  border-radius: 0.80rem;
   background: var(--prima, #4f46e5);
 }
 
 .iconLoginNav {
   color: #ffffff;
-  width: 0.8em;
+  height: 1.4em;
+  margin-right:0.5rem;
 }
 
 .textButtonLogin {
@@ -92,21 +104,119 @@ main {
   text-decoration: none;
 }
 
+/*---------cities---------*/
+.buttonCities {
+  cursor: pointer;
+  display: flex;
+  font-size: 2.5rem;
+  width: 6em;
+  height: 1.8em;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: solid 0.06em #0d0d0d7e;
+  border-radius: 0.80rem;
+  background: var(--prima, #4f46e5);
+  position: relative;
+}
+
+.buttonCities:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, blue, red, #a64e98, lightblue, red, blue,#a64e98, lightblue);
+  background-size: 800%;
+  border-radius: 12px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 400% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}
+
+/* .iconCitiesnNav {
+  color: #ffffff;
+  height: 0.2rem;
+  margin-right:0.2rem;
+} */
+
+.textButtonCities {
+  color: #fff;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/*---------home---------*/
+.buttonHomeNav {
+  border: solid 0.06em #0d0d0d7e;
+  border-radius: 0.80rem;
+  cursor: pointer;
+  display: flex;
+  font-size: 2.5rem;
+  width: 6em;
+  height: 1.8em;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: var(--prima, #4f46e5);
+}
+
+.iconHomeNav {
+  color: #ffffff;
+  height: 1.3em;
+}
+
+.textButtonHome {
+  color: #fff;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}
 /*-------------------HOME-------------------*/
 
 .contentHome {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  gap: 5.1rem; 
+}
+
+.imageHome {
+  border: solid 0.1rem lightgrey;
+  width: 90%;
+  height: 70%;
 }
 
 .textAndButtonHome {
+  align-items: center;
+  border: ridge 6px;
+  border-radius: 1rem;
+  background-color: #d8bdff28;
   display: flex;
-  width: 40vw;
+  height: 106vh;
+  width: 41vw;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
+  gap: 2rem;
+  padding: 1.8% 1% 1% 1.8%;
 }
 
 .tittleArticleHome {
@@ -121,7 +231,7 @@ main {
 .paragraphHome {
   color: var(--grey-p, rgba(28, 28, 28, 0.6));
   font-family: Segoe UI;
-  font-size: 24px;
+  font-size: 1.7rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -130,6 +240,7 @@ main {
 .buttonHome {
   border-radius: 8px;
   background: var(--prima, #4f46e5);
+  cursor: pointer;
   display: flex;
   width: 346px;
   padding: 16px 20px;
@@ -143,34 +254,41 @@ main {
   line-height: normal;
 }
 
+.buttonHome:hover {
+  background-color: #a97aff;
+}
+
 /*-------------------CAROUSEL-------------------*/
 
 .carouselHome {
-  border: solid 0.2rem rgba(128, 128, 128, 0.541);
-  border-radius: 0.6rem;
-  background-color: #d8bdff60;
+  border: ridge 6px;
+  /* border: solid 0.2rem rgba(128, 128, 128, 0.541); */
+  border-radius: 1rem; 
+  background-color: #d8bdff28;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  padding: 0.8rem 1.8rem 0.4rem 2.2rem;
+  padding: 4rem 1.8rem 0.4rem 2.2rem; 
   margin-bottom: 3rem;
   gap: 3.2rem;
   width: 44vw;
-  height: 99vh;
+  height: 106vh;
 }
 
 .carouselCard {
   border: #1c1c1c62 solid 0.167rem;
-  border-radius: 1.5rem;
+  /* border-radius: 1.5rem; */
   background-color: #ffffff;
   text-align: center;
-  height: 22.6rem;
+  height: 24.6rem;
+  width: 24rem;
+  padding: 1.5% 1.5% 0 1.5%;
 }
 
 .carouselPhoto {
-  border-bottom: #1c1c1c solid 0.1rem;;
-  border-radius: 1.2rem 0.67rem 0 0;
-  width: 24rem;
+  border: #1c1c1c2c solid 0.1rem;;
+  /* border-radius: 1.2rem 0.67rem 0 0; */
+  width: 22rem;
   height: 18rem;
 }
 
@@ -178,20 +296,17 @@ main {
   color: #4f46e5;
   font-family: "Segoe UI";
   font-size: 2.3rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3px;
-}
-
-.arrowCarousel {
-  height: 5rem;
+  padding-top: 1rem;
 }
 
 .groupArrowsCarousel {
   flex-direction: row;
+  height: 5.5rem;
   width: 51.8rem;
   gap: 30rem;
   display: flex;
   justify-content: center;
+  padding: 0 0 4rem 0;
 }
 
 /*-------------------FOOTER-------------------*/
@@ -271,3 +386,5 @@ hr {
   color: white;
   padding: 0 1% 0.5% 0;
 }
+
+/*----------------------------------------*/
