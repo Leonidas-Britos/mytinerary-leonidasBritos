@@ -1,6 +1,8 @@
 
 export default function CityDetail() {
   return (
-    <div>CityDetail under construction</div>
+    <div className="webPageConstruction">
+      <img src="./public/img/construction.jpg" alt="" />
+    </div>
   )
 }

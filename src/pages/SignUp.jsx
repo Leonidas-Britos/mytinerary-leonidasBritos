@@ -1,6 +1,8 @@
 
 export default function SignUp() {
   return (
-    <div>SignUp under construction</div>
+    <div className="webPageConstruction">
+      <img src="./public/img/construction.jpg" alt="" />
+    </div>
   )
 }
