@@ -1,6 +1,8 @@
 
 export default function Cities() {
   return (
-    <div>Cities under construction</div>
+    <div className="webPageConstruction">
+      <img src="./public/img/construction.jpg" alt="" />
+    </div>
   )
 }
