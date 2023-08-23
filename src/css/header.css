@@ -1,0 +1,64 @@
+/*-------------------HEADER-------------------*/
+
+.headerHome {
+  border-bottom: rgba(0, 0, 0, 0.233) solid 0.11em;
+  display: flex;
+  height: 9rem;
+  width: 98.93vw;
+  justify-content: space-between;
+  gap: 25rem;
+  align-items: center;
+  padding: 1% 6% 1% 6%;
+}
+
+.logoCompanyHeader {
+  height: 6rem;
+  width: 22rem;
+  cursor: pointer;
+}
+
+/*-------------------NAV-------------------*/
+
+.navPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*-------------------ButtonNav-------------------*/
+
+.buttonLoginNav,
+.buttonCitiesNav,
+.buttonHomeNav {
+  cursor: pointer;
+  padding: 0 1% 0 1%;
+  display: flex;
+  font-size: 1.9rem;
+  width: 4.2em;
+  height: 1.7em;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1em;
+  border: solid 0.06em #0d0d0d7e;
+  border-radius: 0.8rem;
+  background: var(--prima, #4f46e5);
+}
+
+.buttonLoginNav:hover,
+.buttonCitiesNav:hover,
+.buttonHomeNav:hover {
+  background: #a97aff;
+  color: black;
+}
+
+.textButtonLogin,
+.textButtonCities,
+.textButtonHome {
+  color: #fff;
+  font-size: 0.6em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+}

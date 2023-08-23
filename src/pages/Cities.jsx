@@ -21,9 +21,14 @@ export default function Cities() {
     setReEffect(!reEffect)
   }
   return (
+    <div className="contentCities">
     <>
-    <input ref={text} type="text" name="text" id="text" onKeyUp={handleFilter} />
+
+    <input className="searchCities"  placeholder="Search your city" ref={text} type="text" name="text" id="text" onKeyUp={handleFilter} />
+    <div className="cardsCities">
     {cities.map(each=><CardCity key={each._id} src={each.photo} alt={each._id} text={each.city} id={each._id} />)}
+    </div>
     </>
+    </div>
   )
 }
