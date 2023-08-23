@@ -1,0 +1,62 @@
+.contentCities {
+  padding: 5% 3% 10% 3%;
+}
+
+.cardsCities {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.searchCities {
+  border: 0.5px solid black;
+  border-radius: 0.3rem;
+  height: 2.3rem;
+  width: 30%;
+  margin-bottom: 4%;
+  font-size: 1.4rem;
+  padding-left: 0.8em;
+}
+
+.cityCard {
+  cursor: pointer;
+  border: #1c1c1c62 solid 0.167rem;
+  background-color: #d8bdff28;
+  text-align: center;
+  height: 22rem;
+  width: 19rem;
+  padding: 4% 1.5% 2% 4.8%;
+}
+
+.cityCardPhoto {
+  border: #1c1c1c2c solid 0.1rem;
+  width: 17rem;
+  height: 12rem;
+}
+
+.cityCardCityTittle {
+  color: #4f46e5;
+  font-family: "Segoe UI";
+  font-size: 1.9rem;
+  padding-top: 0.7rem;
+}
+
+.cityCardButton {
+  border: solid 1px black;
+  border-radius: 0.3em;
+  color: white;
+  font-size: 1.3em;
+  background-color: #4f46e5;
+  padding: 0.4em;
+  margin-top: 1em;
+  width: 70%;
+  height: 14%;
+}
+
+.cityCardButton:hover {
+    background-color: #a97aff;
+    color: black;
+}

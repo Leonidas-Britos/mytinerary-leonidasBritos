@@ -1,0 +1,122 @@
+/*-------------------HOME-------------------*/
+
+.contentHome {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 3rem;
+  padding: 5% 3% 10% 3%;
+}
+
+.imageHome {
+  border: solid 0.1rem lightgrey;
+  width: 90%;
+  height: 70%;
+}
+
+.textAndButtonHome {
+  align-items: center;
+  border: ridge 6px;
+  border-radius: 1rem;
+  background-color: #d8bdff28;
+  display: flex;
+  height: 115vh;
+  width: 41vw;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2.1% 1% 2% 1.8%;
+}
+
+.tittleArticleHome {
+  color: var(--black, #1c1c1c);
+  font-family: Segoe UI;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.pHome {
+  color: var(--grey-p, rgba(28, 28, 28, 0.6));
+  font-family: Segoe UI;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.buttonViewMoreHome {
+  border-radius: 0.7rem;
+  background: var(--prima, #4f46e5);
+  cursor: pointer;
+  display: flex;
+  height: 3.8rem;
+  width: 16rem;
+  padding: 3% 2%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.buttonViewMoreHome:hover {
+  background-color: #a97aff;
+  color: black;
+}
+
+
+/*-------------------CAROUSEL-------------------*/
+
+.carouselHomeContent {
+  border: ridge 6px;
+  border-radius: 1rem;
+  background-color: #d8bdff28;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 6% 0 1% 0;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  width: 52vw;
+  height: 115vh;
+}
+
+.carouselCard {
+  cursor: pointer;
+  border: #1c1c1c62 solid 0.167rem;
+  background-color: #ffffff;
+  text-align: center;
+  height: 17.2rem;
+  width: 19rem;
+  padding: 2% 2% 0 2.8%;
+}
+
+.carouselPhoto {
+  border: #1c1c1c2c solid 0.1rem;
+  width: 16rem;
+  height: 12rem;
+}
+
+.carouselCardCityTittle {
+  color: #4f46e5;
+  font-family: "Segoe UI";
+  font-size: 1.9rem;
+  padding-top: 0.7rem;
+}
+
+.groupArrowsCarousel {
+  flex-direction: row;
+  height: 4rem;
+  width: 51.8rem;
+  gap: 30rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 10% 0;
+}
