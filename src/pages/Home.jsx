@@ -1,7 +1,29 @@
+import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
 import { Link as Anchor } from "react-router-dom";
+import axios from "axios";
+import apiUrl from "../apiUrl";
+
 
 export default function Home() {
+
+  const [data, setData] = useState([]);
+
+   useEffect(
+    () => {
+      axios(apiUrl+'cities/carousel')
+        // .then((res) => console.log(res.data.data_carousel))
+        .then(res => setData(res.data.data_carousel))
+        .catch(err => console.log(err));
+    }, //callback que NO debe retornar nada y NO puede ser asincrona
+    [] //array de dependencias
+    //cuando está vacío EL EFECTO se ejecuta UNA UNICA VEZ cuando se monta el componente
+    //cuando tiene variables de dependencias EL EFECTO se ejecuta (cuando se monta y) CADA VEZ que varía/cambia alguna de esas variables
+    //[show]  //en este ejemplo CADA VEZ que el booleano CAMBIE, se ejecuta la caalback de la L28
+  );
+
+
+
   return (
     <div className="contentHome">
       <div className="textAndButtonHome">
@@ -19,7 +41,7 @@ export default function Home() {
           <button className="buttonViewMoreHome">View More</button>
         </Anchor>
       </div>
-      <Carousel />
+      <Carousel data={data}/>
     </div>
   );
 }
