@@ -1,4 +1,4 @@
-let apiUrl = 'http://localhost:8080/api/'
+let apiUrl = 'http://localhost:8000/api/'
 
 
 

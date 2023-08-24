@@ -33,6 +33,7 @@ footer {
   flex-direction: column;
   gap: 1rem;
 }
+
 .groupLink1:hover,
 .groupLink2:hover,
 .groupLink3:hover {
