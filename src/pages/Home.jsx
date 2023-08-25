@@ -1,29 +1,36 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import Carousel from "../components/Carousel";
 import { Link as Anchor } from "react-router-dom";
 import axios from "axios";
 import apiUrl from "../apiUrl";
-
+import { useSelector, useDispatch } from "react-redux";
+import city_actions from '../store/actions/cities';
+const { read_carousel } = city_actions;
 
 export default function Home() {
 
   const [data, setData] = useState([]);
-
-   useEffect(
-    () => {
-      axios(apiUrl+'cities/carousel')
-        // .then((res) => console.log(res.data.data_carousel))
-        .then(res => setData(res.data.data_carousel))
-        .catch(err => console.log(err));
-    }, //callback que NO debe retornar nada y NO puede ser asincrona
-    [] //array de dependencias
+  //const store = useSelector(store=>store)
+  //console.log(store);
+  //const city_reducer = useSelector(store=>store.cities)
+  //console.log(city_reducer);
+  const carousel = useSelector(store=>store.cities.carousel)
+  // console.log(carousel);
+  const dispatch = useDispatch()
+  useEffect(
+    ()=>{
+      if (carousel.length===0) {
+        dispatch(read_carousel())
+      }
+    },        //callback que NO debe retornar nada y NO puede ser asincrona
+    []     //array de dependencias
     //cuando está vacío EL EFECTO se ejecuta UNA UNICA VEZ cuando se monta el componente
     //cuando tiene variables de dependencias EL EFECTO se ejecuta (cuando se monta y) CADA VEZ que varía/cambia alguna de esas variables
     //[show]  //en este ejemplo CADA VEZ que el booleano CAMBIE, se ejecuta la caalback de la L28
-  );
 
-
-
+    );
+console.log(carousel);
   return (
     <div className="contentHome">
       <div className="textAndButtonHome">
@@ -41,7 +48,7 @@ export default function Home() {
           <button className="buttonViewMoreHome">View More</button>
         </Anchor>
       </div>
-      <Carousel data={data}/>
+      <Carousel data={carousel} />
     </div>
   );
 }

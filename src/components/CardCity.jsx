@@ -13,3 +13,4 @@ export default function CardCity({ src, alt, text, country, id }) {
     </Anchor>
   );
 }
+

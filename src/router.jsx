@@ -5,11 +5,13 @@ import SignUp from "./pages/SignUp";
 import Cities from "./pages/Cities";
 import CityDeatil from "./pages/CityDetail";
 import MainLayout from "./layouts/MainLayout";
+import FormSignUp from "./pages/FormSignUp"
+import FormSignIn from "./pages/FormSignIn"
 
 
-const router = createBrowserRouter ([
-    { 
-        path: "/", 
+const router = createBrowserRouter([
+    {
+        path: "/",
         element: <MainLayout />,
         children: [
             { path: "/", element: <Home /> },
@@ -18,7 +20,9 @@ const router = createBrowserRouter ([
             { path: "/signin", element: <SignIn /> },
             { path: "/signup", element: <SignUp /> },
             { path: "/cities", element: <Cities /> },
-            { path: "/city/:id", element: <CityDeatil /> }
+            { path: "/city/:city_id", element: <CityDeatil /> },
+            { path: "/auth/signup", element: <FormSignUp /> },
+            { path: "/auth/signin", element: <FormSignIn /> }
         ]
     },
 ]);
