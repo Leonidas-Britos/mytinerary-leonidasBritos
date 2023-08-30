@@ -8,10 +8,14 @@ const read_carousel = createAsyncThunk(
         try {
             let data = await axios(apiUrl+'cities/carousel')
             //console.log(data);
-            return { carousel: data.data.data_carousel }
+            return { 
+                carousel: data.data.data_carousel 
+            }
         } catch (error) {
             console.log(error);
-            return { carousel: [] }
+            return { 
+                carousel: [] 
+            }
         }
     }
 )
@@ -21,7 +25,7 @@ const read_cities = createAsyncThunk(
     async(obj)=> {
         try {
             let data = await axios(apiUrl+'cities?city='+obj.text)
-            console.log(data);
+            // console.log(data);
             return { cities: data.data.response }
         } catch (error) {
             console.log(error);
@@ -35,7 +39,7 @@ const read_city = createAsyncThunk(
     async(obj)=> {
         try {
             let data = await axios(apiUrl+'cities/'+obj.id)
-            console.log(data);
+            // console.log(data);
             return { city: data.data.response }
         } catch (error) {
             console.log(error);
