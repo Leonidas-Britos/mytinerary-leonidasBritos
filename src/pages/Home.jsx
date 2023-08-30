@@ -11,12 +11,7 @@ const { read_carousel } = city_actions;
 export default function Home() {
 
   const [data, setData] = useState([]);
-  //const store = useSelector(store=>store)
-  //console.log(store);
-  //const city_reducer = useSelector(store=>store.cities)
-  //console.log(city_reducer);
   const carousel = useSelector(store=>store.cities.carousel)
-  // console.log(carousel);
   const dispatch = useDispatch()
   useEffect(
     ()=>{
