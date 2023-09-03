@@ -28,14 +28,15 @@ export default function Home() {
 console.log(carousel);
   return (
     <div id="HomeContent" className="w-[100%] h-[100%] gap-[3rem] px-[3%] py-[4%] flex flex-col justify-center bg-[#EBEBEB] 
+    md:
     lg:flex-row flex-wrap
     xl:flex-row flex-nowrap"> 
 
-      <div id="boxItinerariesHome" className="w-[auto] h-[80rem] mb-[1rem] gap-[2rem] flex flex-col border-[#1c1c1c62] border-[0.167rem] rounded-[1rem] bg-[#fdfdfd] 
+      <div id="boxItinerariesHome" className="w-[auto] h-[45rem] mb-[1rem] gap-[2rem] flex flex-col border-[#1c1c1c62] border-[0.167rem] rounded-[1rem] bg-[#fdfdfd] 
       sm:w-[38rem] sm:h-[50rem] px-[1%] m-[0%] gap-[0rem] 
-      md:w-[53rem] md:h-[auto] py-[4%] m-[0%] gap-[0rem] justify-center items-center
+      md:w-[53rem] md:h-[auto] py-[2%] m-[auto] gap-[0rem] justify-center items-center
       lg:w-[28rem] lg:h-[44rem] py-[2%] m-[0%] gap-[0rem] flex-row
-      xl:w-[38rem] xl:h-[39rem]">
+      xl:w-[38rem] xl:h-[39rem] py-[2%]">
         <h1 id="titleItinerariesBoxHome" className="text-[#1c1c1c] text-[2rem] non-italic font-normal leading-snug">
           Find your perfect trip, designed by insiders who know and love their
           cities!
