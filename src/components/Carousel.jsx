@@ -27,11 +27,11 @@ export default function Carousel({ data }) {
   }
   return (
     <div>
-      <div id="carouselComponent" className="w-[36rem] h-[46rem] pl-[3.5%] py-[3%] gap-[1.2rem] mb-[30rem] flex flex-row flex-wrap bg-[#fdfdfd] border-solid rounded-[1rem] border-[0.167rem] border-[#1c1c1c62]
-      sm:w-[auto] h-[auto] px-[4%] py-[5%] gap-[3rem] mb-[8rem] justify-center
-      md:w-[auto] h-[auto] gap-[1rem] mb-[15%] pt-[3%] mb-[89rem] 
-      lg:w-[37rem] h-[45rem] mb-[89rem] pl-[1%] pr-[1%] py-[2%] mb-[50rem]
-      xl:w-[37rem]">
+      <div id="carouselComponent" className="w-[36rem] h-[46rem] pl-[3.5%] py-[3%] gap-[1.2rem] mb-[20rem] flex flex-row flex-wrap bg-[#fdfdfd] border-solid rounded-[1rem] border-[0.167rem] border-[#1c1c1c62]
+      sm:w-[auto] sm:h-[auto] px-[4%] py-[5%] gap-[3rem] mb-[8rem] justify-center
+      md:w-[auto] md:h-[auto] gap-[1rem] mb-[15%] pt-[3%] mb-[89rem] 
+      lg:w-[37rem] lg:h-[40rem] mb-[89rem] pl-[1%] pr-[1%] py-[2%] mb-[50rem]
+      xl:w-[37rem] xl:h-[38.5rem]">
         {data.slice(counter, counterTo).map((each) => (
           <CarouselCard
             key={each._id}
