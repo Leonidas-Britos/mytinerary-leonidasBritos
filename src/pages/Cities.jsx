@@ -24,15 +24,17 @@ export default function Cities() {
 
     <div className='w-[100%] flex flex-wrap py-[7%] gap-[0.5rem] bg-[#EBEBEB]'>
       <>
-      
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-6 ml-[5%]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-        </svg>
-        <input className='border-[0.125rem] rounded-[0.3rem] w-[30%] h-[2.5rem]' ref={text} type="text" name="text" id="text" placeholder='Search your city' onKeyUp={handleFilter} />
-        
+        <div className='flex items-center gap-[0.6rem] m-auto'>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-6 ml-[5%] 
+          sm: w-8 h-8">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+          <input ref={text} type="text" name="text" id="text" placeholder='Search your city' onKeyUp={handleFilter} className='border-[0.125rem] rounded-[0.3rem] w-[25rem] h-[2.5rem] pl-[0.6rem]
+          sm:w-[32rem] h-[3rem] text-[1.6rem]'/>
+        </div>
 
 
-        <div className='flex flex-wrap justify-between gap-[3rem] px-[5%] py-[5%]'>
+        <div className='flex flex-wrap justify-center gap-[3rem] px-[5%] py-[5%] '>
           {cities.map(each => <CardCity key={each._id} src={each.photo} alt={each._id} text={each.city} id={each._id} />)}
         </div>
 
