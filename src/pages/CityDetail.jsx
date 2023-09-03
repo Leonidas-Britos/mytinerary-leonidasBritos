@@ -17,7 +17,7 @@ export default function CityDetail() {
     },[]);
   // console.log(city);
   return (
-    <div className='w-fullflex py-[8%] flex-col justify-center border-solid border-black border-2'>
+    <div className='w-[97.9vw" h-[40rem] pt-[12%] justify-center bg-[#EBEBEB]'>
       <DetailCity src={city.photo} alt={city_id} text={city.city} city={city} id={city_id}
       />
     </div>

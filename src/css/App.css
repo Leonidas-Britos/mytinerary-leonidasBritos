@@ -1,8 +1,4 @@
-@import "header.css";
-@import "footer.css";
-@import "home.css";
-@import "cities.css";
-/* @import "mediaqueries.css"; */
+
 
 * {
   box-sizing: border-box;
@@ -12,7 +8,7 @@
 
 #root {
   display: flex;
-  width: 98.93vw;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
 }

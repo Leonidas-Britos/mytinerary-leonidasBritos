@@ -27,16 +27,20 @@ export default function Carousel({ data }) {
   }
   return (
     <div>
-      <div className="w-[52vw] h-[115vh] py-[6%] px-[2%] border-solid rounded-[1rem] border-[0.167rem] border-[#1c1c1c62] flex flex-row justify-center flex-wrap align-center gap-[2rem] mb-[3rem] bg-[#fdfdfd]">
+      <div id="carouselComponent" className="w-[36rem] h-[46rem] pl-[3.5%] py-[3%] gap-[1.2rem] mb-[50rem] flex flex-row flex-wrap bg-[#fdfdfd] border-solid rounded-[1rem] border-[0.167rem] border-[#1c1c1c62]
+      sm: w-[36rem] h-[45rem] px-[2%] py-[3%] gap-[0rem] mb-[20rem]
+      md: h-[60%] w-[53%] gap-[1rem] mb-[15%] pt-[3%] mb-[89rem] 
+      lg: w-[40rem] mb-[89rem]">
         {data.slice(counter, counterTo).map((each) => (
           <CarouselCard
-            key={each.id}
+            key={each._id}
             src={each.photo}
-            alt={each.id}
+            alt={each._id}
             text={each.city}
           />
         ))}
-        <div className="flex flex-row justify-center gap-[30rem] pd-[10%]">
+        <div className="flex flex-row justify-center gap-[22rem]
+        lg: gap-[10rem]">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="h-20 cursor-pointer hover:stroke-purple-800" onClick={prev_slide}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
           </svg>
