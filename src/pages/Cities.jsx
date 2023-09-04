@@ -22,7 +22,9 @@ export default function Cities() {
   return (
 
 
-    <div id='citiesContent' className='w-[100%] flex flex-wrap py-[7%] gap-[0.5rem] bg-[#EBEBEB]'>
+    <div id='citiesContent' className='w-[100%] flex flex-wrap py-[7%] gap-[0.5rem] bg-[#EBEBEB]
+    lg:w-[100%] lg:h-[auto] flex flex-wrap py-[7%] gap-[0.5rem] bg-[#EBEBEB]
+    xl:w-[100%] xl:h-[auto] flex flex-wrap py-[7%] gap-[0.5rem] bg-[#EBEBEB]'>
       <>
         <div className='flex items-center gap-[0.6rem] m-auto'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-6 ml-[5%] 
@@ -36,7 +38,7 @@ export default function Cities() {
 
         <div id='cardCitiesContent'  className='flex flex-wrap justify-center gap-[3rem] px-[5%] py-[5%] bg-[#EBEBEB]
         lg:flex-row
-        xl:'>
+        xl:flex-row'>
           {cities.map(each => <CardCity key={each._id} src={each.photo} alt={each._id} text={each.city} id={each._id} />)}
         </div>
 
