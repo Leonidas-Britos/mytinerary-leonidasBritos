@@ -19,13 +19,13 @@ export default function Navbar() {
           sm:hidden
           md:hidden">
             <Anchor to="/home">
-              <p className="text-[1.7rem] text-[white] rounded-[0.5rem] px-5 py-1 bg-[#4f46e5] sm:hidden" >Home</p>
+              <p className="text-[1.7rem] text-[white] border-2 border-solid border-black rounded-[0.5rem] hover:bg-[#a97aff] hover:text-[black] group hover:text-black px-5 py-1 bg-[#4f46e5] sm:hidden" >Home</p>
             </Anchor>
             <Anchor to="/cities">
-              <p className="text-[1.7rem] text-[white] rounded-[0.5rem] px-5 py-1 bg-[#4f46e5] sm:hidden" >Cities</p>
+              <p className="text-[1.7rem] text-[white] border-2 border-solid border-black rounded-[0.5rem] hover:bg-[#a97aff] hover:text-[black] group hover:text-black px-5 py-1 bg-[#4f46e5] sm:hidden" >Cities</p>
             </Anchor>
             <Anchor to="/signin">
-              <p className="text-[1.7rem] text-[white] rounded-[0.5rem] px-5 py-1 bg-[#4f46e5] sm:hidden" >Login</p>
+              <p className="text-[1.7rem] text-[white] border-2 border-solid border-black rounded-[0.5rem] hover:bg-[#a97aff] hover:text-[black] group hover:text-black px-5 py-1 bg-[#4f46e5] sm:hidden" >Login</p>
             </Anchor>
 
           </div>
@@ -46,13 +46,13 @@ export default function Navbar() {
         </div>
         <nav className="sm:flex justify-center items-center gap-[0.8rem] hidden">
           <Anchor to="/home" className="sm:text-[#fff] text-[1.8rem] non-italic font-semibold no-unerline">
-            <div className="sm:w-[8rem] h-[4rem]  bg-[#4f46e5] border-solid border-[0.06em #0d0d0d7e] rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
+            <div className="sm:w-[8rem] h-[4rem]  bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
               <img className="sm:iconHomeNav" />
               Home
             </div>
           </Anchor>
           <Anchor to="/cities" className="sm:text-[#fff] text-[1.8rem] non-italic font-semibold no-underline">
-            <div className="sm:w-[8rem] h-[4rem] bg-[#4f46e5] border-solid border-[0.06em #0d0d0d7e] rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
+            <div className="sm:w-[8rem] h-[4rem] bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
               <svg className="sm:w-10 stroke-[white] group-hover:stroke-[black]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
               </svg>
@@ -61,7 +61,7 @@ export default function Navbar() {
           </Anchor>
 
           <Anchor to="/signin" className="sm:text-[#fff] text-[1.8rem] non-italic font-semibold no-underline">
-            <div className="sm:w-[8rem] h-[4rem] bg-[#4f46e5] border-solid border-[0.06em #0d0d0d7e] rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
+            <div className="sm:w-[8rem] h-[4rem] bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
               <svg className="sm:w-10 stroke-[white] group-hover:stroke-[black]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>

@@ -37,7 +37,7 @@ console.log(carousel);
       md:w-[53rem] md:h-[auto] py-[2%] m-[auto] gap-[0rem] justify-center items-center
       lg:w-[28rem] lg:h-[44rem] py-[2%] m-[0%] gap-[0rem] flex-row
       xl:w-[38rem] xl:h-[39rem] py-[2%]">
-        <h1 id="titleItinerariesBoxHome" className="text-[#1c1c1c] text-[2rem] non-italic font-normal leading-snug">
+        <h1 id="titleItinerariesBoxHome" className="text-[#1c1c1c] text-[2rem] text-[Segoe UI] non-italic font-normal leading-snug">
           Find your perfect trip, designed by insiders who know and love their
           cities!
         </h1>
@@ -53,7 +53,7 @@ console.log(carousel);
         xl: 
         "/>
         <Anchor to="/cities" className="flex justify-center items-center">
-          <button id="buttonItinerariesBoxHome" className="w-[16rem] h-[3.8rem] py-[3%] px-[2%] justify-center items-center gap-[1rem] text-[#fff] text-[1.7rem] non-italic font-medium leading-normal roundend-[0.9rem] bg-[#4f46e5] cursor-pointer flex hover:bg-[#a97aff] hover:text-[black]">View More</button>
+          <button id="buttonItinerariesBoxHome" className="w-[16rem] h-[3.8rem] py-[3%] px-[2%] justify-center items-center gap-[1rem] text-[#fff] text-[1.7rem] non-italic font-medium leading-normal border-2 border-solid border-black rounded-[0.5rem] bg-[#4f46e5] cursor-pointer flex hover:bg-[#a97aff] hover:text-[black]">View More</button>
         </Anchor>
       </div>
       <Carousel data={carousel} />
