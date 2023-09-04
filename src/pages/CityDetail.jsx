@@ -17,8 +17,8 @@ export default function CityDetail() {
     },[]);
   // console.log(city);
   return (
-    <div className='w-[97.9vw" h-[40rem] pt-[12%] justify-center bg-[#EBEBEB]'>
-      <DetailCity src={city.photo} alt={city_id} text={city.city} city={city} id={city_id}
+    <div className='w-[auto] h-[auto] justify-center bg-[EBEBEB]'>
+      <DetailCity src={city.photo} alt={city_id} tittle={city.city} city={city} id={city_id} description={city.description}
       />
     </div>
 
