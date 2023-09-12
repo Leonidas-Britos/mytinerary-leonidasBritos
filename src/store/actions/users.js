@@ -67,5 +67,28 @@ const signin_token = createAsyncThunk(
     }
 )
 
-const user_actions = { read_6_users, signin, signin_token  }
+const signout = createAsyncThunk(
+    'signout',
+    async()=> {
+        try {
+            let token = localStorage.getItem('token')
+            let authorization = { headers:{ 'Authorization':`Bearer ${token}` } }
+            let data = await axios.post(apiUrl+'auth/signout',null,authorization)
+            //console.log(data);
+            localStorage.removeItem('token')
+            return {
+                user: {},
+                token: ''
+            }
+        } catch (error) {
+            console.log(error);
+            return {
+                user: {},
+                token: ''
+            }
+        }
+    }
+)
+
+const user_actions = { read_6_users, signin, signin_token, signout  }
 export default user_actions;
