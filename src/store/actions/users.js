@@ -40,6 +40,7 @@ const signin = createAsyncThunk(
      }
  )
 
+<<<<<<< HEAD
  const signin_token = createAsyncThunk(
     'signin_token',
     async()=> {
@@ -64,4 +65,8 @@ const signin = createAsyncThunk(
 )
 
 const user_actions = { read_6_users, signin, signin_token  }
+=======
+
+const user_actions = { read_6_users,signin  }
+>>>>>>> bfe0ad2acf3e70489e9bb71bb4a55fbe86762593
 export default user_actions;
