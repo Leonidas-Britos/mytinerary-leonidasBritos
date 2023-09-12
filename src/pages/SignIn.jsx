@@ -8,22 +8,14 @@ export default function SignIn() {
   const mail_signin = useRef("");
   const password_signin = useRef("");
   const dispatch = useDispatch();
-<<<<<<< HEAD
   function handleSignIn() {
-=======
-  async function handleSignIn() {
->>>>>>> bfe0ad2acf3e70489e9bb71bb4a55fbe86762593
     let data = {
       mail: mail_signin.current.value,
       password: password_signin.current.value,
     };
     dispatch(signin({ data }));
   }
-<<<<<<< HEAD
   let user = useSelector((store)=>store)
-=======
-  let user = useSelector(store=>store)
->>>>>>> bfe0ad2acf3e70489e9bb71bb4a55fbe86762593
   console.log(user);
   return (
     <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white m-auto">
