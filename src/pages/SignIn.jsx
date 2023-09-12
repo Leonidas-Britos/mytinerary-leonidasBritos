@@ -8,14 +8,14 @@ export default function SignIn() {
   const mail_signin = useRef("");
   const password_signin = useRef("");
   const dispatch = useDispatch();
-  async function handleSignIn() {
+  function handleSignIn() {
     let data = {
       mail: mail_signin.current.value,
       password: password_signin.current.value,
     };
     dispatch(signin({ data }));
   }
-  let user = useSelector(store=>store)
+  let user = useSelector((store)=>store)
   console.log(user);
   return (
     <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white m-auto">
