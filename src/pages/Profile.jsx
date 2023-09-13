@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import UserData from "../components/UserData";
 import { useDispatch, useSelector } from "react-redux";
+import Swal from 'sweetalert2'; // Importa SweetAlert
 import user_actions from "../store/actions/users";
 const { update_user } = user_actions;
 
@@ -32,18 +33,31 @@ export default function Profile() {
       if (password.current.value) {
         data.password = password.current.value;
       }
-      //console.log(data);
+
       dispatch(update_user({ data }));
+
+      // Muestra el mensaje de éxito con SweetAlert
+      Swal.fire({
+        icon: 'success',
+        title: 'Updated',
+        text: 'User data has been updated successfully.',
+      });
+
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'An error occurred while updating user data.',
+      });
     }
   }
   return (
-    <div className="flex flex-col flex-grow items-center justify-center md:flex-row md:justify-evenly">
+    <div className="h-[40rem] flex flex-col flex-grow items-center justify-center md:flex-row md:justify-evenly bg-[#EBEBEB]">
       <UserData user={user} show={show} setShow={setShow} />
       {show && (
-        <form className="flex flex-col items-center justify-center p-[20px] w-[360px] h-[400px] bg-red-200 sm:bg-white my-[20px] md:my-0">
-          <h1 className="text-[36px] font-bold text-center mb-[10px]">
+        <form className="flex flex-col items-center justify-center p-[20px] w-[360px] h-[400px] bg-red-200 sm:bg-white my-[20px] md:my-0 border-[#1c1c1c62] border-[0.167rem] rounded-[1rem]">
+          <h1 className="text-[36px] font-semibold text-center mb-[10px]">
             Update!
           </h1>
           <input
@@ -93,7 +107,7 @@ export default function Profile() {
           />
           <input
             type="button"
-            className="w-full shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
+            className="w-full shadow bg-[#4f46e5] hover:bg-[#a97aff] hover:text-[black] focus:shadow-outline focus:outline-none text-white font-semibold py-2 px-4 rounded cursor-pointer"
             value="Update!"
             onClick={handleUpdate}
           />

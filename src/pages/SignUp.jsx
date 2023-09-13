@@ -1,11 +1,13 @@
-import { useRef,useEffect,useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import Users from "../components/Users";
 import axios from "axios";
 import apiUrl from "../apiUrl";
 import { Link as Anchor } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import Swal from "sweetalert2"; // Importa SweetAlert
 import user_actions from "../store/actions/users";
-const { read_6_users } = user_actions
+const { read_6_users } = user_actions;
+
 export default function SignUp() {
   const name = useRef("");
   const lastName = useRef("");
@@ -15,10 +17,11 @@ export default function SignUp() {
   const password = useRef("");
   const [reload, setReload] = useState(false);
   const dispatch = useDispatch();
-  useEffect(
-    ()=>{dispatch(read_6_users())},
-    [reload]
-  )
+
+  useEffect(() => {
+    dispatch(read_6_users());
+  }, [reload]);
+
   async function handleSignUp() {
     try {
       let data = {
@@ -29,14 +32,23 @@ export default function SignUp() {
         mail: mail.current.value,
         password: password.current.value,
       };
-      await axios.post(
-        apiUrl + "users/signup", //url del endpoind de creacion
-        data //objeto con los datos para crear
-      );
+      await axios.post(apiUrl + "users/signup", data);
       setReload(!reload);
       console.log(data);
+      // Muestra el mensaje SweetAlert cuando los datos se actualicen con éxito
+      Swal.fire({
+        icon: "success",
+        title: "Datos actualizados con éxito",
+        text: "Los datos del usuario se han actualizado correctamente.",
+      });
     } catch (error) {
       console.log(error);
+      // Muestra un mensaje de error si ocurre un problema
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "Ha ocurrido un error al actualizar los datos del usuario.",
+      });
     }
   }
   return (
