@@ -10,7 +10,7 @@ export default function SignIn() {
   const mail_signin = useRef("");
   const password_signin = useRef("");
   const dispatch = useDispatch();
- function handleSignIn() {
+  function handleSignIn() {
     let data = {
       mail: mail_signin.current.value,
       password: password_signin.current.value,
@@ -41,41 +41,43 @@ export default function SignIn() {
   let user = useSelector((store) => store)
   console.log(user);
   return (
-    <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white m-auto">
-      <h1 className="text-[36px] font-bold text-center mb-[10px]">Sign In!</h1>
-      <input
-        ref={mail_signin}
-        type="text"
-        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-        name="mail_signin"
-        id="mail_signin"
-        defaultValue=""
-        placeholder="Type Mail"
-      />
-      <input
-        ref={password_signin}
-        type="password"
-        className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-        name="password_signin"
-        id="password_signin"
-        defaultValue=""
-        placeholder="Type Password"
-      />
-      <input
-        type="button"
-        className="mb-[10px] w-full shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
-        value="Sign In!"
-        onClick={handleSignIn}
-      />
-      <p>
-        Don't you have an account?{" "}
-        <Anchor
-          className="text-[20px] font-bold text-purple-500 cursor-pointer"
-          to="/signup"
-        >
-          Sign up!
-        </Anchor>
-      </p>
-    </form>
+    <div id="SignInContent" className="w-[100%] h-[100%] gap-[3rem] px-[3%] py-[4%] flex flex-col justify-center bg-[#EBEBEB]">
+      <form className="flex flex-col items-center justify-center gap-[1.3rem] p-[20px] h-[25rem] w-[25rem] bg-white m-auto border-[#1c1c1c62] border-[0.167rem] rounded-[1rem]">
+        <h1 className="text-[36px] font-semibold text-center mb-[10px]">Sign In!</h1>
+        <input
+          ref={mail_signin}
+          type="text"
+          className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-[#1c1c1c62] rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          name="mail_signin"
+          id="mail_signin"
+          defaultValue=""
+          placeholder="Type Mail"
+        />
+        <input
+          ref={password_signin}
+          type="password"
+          className="text-center mb-[10px] bg-gray-200 appearance-none border-2 border-[#1c1c1c62] rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+          name="password_signin"
+          id="password_signin"
+          defaultValue=""
+          placeholder="Type Password"
+        />
+        <input
+          type="button"
+          className="mb-[10px] w-full shadow bg-[#4f46e5] hover:bg-[#a97aff] hover:text-[black] focus:shadow-outline focus:outline-none text-white font-semibold py-2 px-4 rounded cursor-pointer"
+          value="Sign In!"
+          onClick={handleSignIn}
+        />
+        <p>
+          Don't you have an account?{" "}
+          <Anchor
+            className="text-[20px] font-semibold text-[#4f46e5] hover:text-[#a97aff] cursor-pointer"
+            to="/signup"
+          >
+            Sign up!
+          </Anchor>
+        </p>
+      </form>
+    </div>
   );
 }
