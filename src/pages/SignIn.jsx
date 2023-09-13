@@ -15,7 +15,7 @@ export default function SignIn() {
       mail: mail_signin.current.value,
       password: password_signin.current.value,
     };
-    let responseDispatch = dispatch(signin({ data }))
+    dispatch(signin({ data }))
       .then((res) => {
         console.log(res);
         if (res.payload.token) {
