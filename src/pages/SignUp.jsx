@@ -40,9 +40,9 @@ export default function SignUp() {
     }
   }
   return (
-    <div className="flex">
-      <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white">
-        <h1 className="text-[36px] font-bold text-center mb-[10px]">
+    <div id="SignUpContent" className="w-[100%] h-[100%] gap-[3rem] px-[3%] py-[4%] flex flex-col justify-center bg-[#EBEBEB]">
+      <form className="flex flex-col items-center justify-center p-[20px] w-[360px] bg-white mx-auto border-[#1c1c1c62] border-[0.167rem] rounded-[1rem]">
+        <h1 className="text-[36px] font-semibold text-center mb-[10px]">
           Sign Up!
         </h1>
         <input
@@ -101,21 +101,20 @@ export default function SignUp() {
         />
         <input
           type="button"
-          className="mb-5 w-full shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
+          className="mb-5 w-full shadow bg-[#4f46e5] hover:bg-[#a97aff] hover:text-[black] focus:shadow-outline focus:outline-none text-white font-bold focus:shadow-outline focus:outline-none text-white font-semibold py-2 px-4 rounded cursor-pointer"
           value="Sign Up!"
           onClick={handleSignUp}
         />
         <p>
           Already have an account?{" "}
           <Anchor
-            className="text-[20px] font-bold text-purple-500 cursor-pointer"
+            className="text-[20px] font-semibold text-[#4f46e5] hover:text-[#a97aff] cursor-pointer"
             to="/signin"
           >
             Sign in!
           </Anchor>
         </p>
       </form>
-      <Users />
     </div>
   );
 }

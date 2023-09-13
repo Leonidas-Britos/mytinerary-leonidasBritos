@@ -19,6 +19,6 @@ export default function Activities({ itinerary_id }) {
   )
 
   return (
-    <div className="pt-[2rem] gap-[1rem] flex flex-row flex-wrap justify-center items-center">{activity?.map(each => <div className="wrap m-7 w-[230px] h-[174px] border border-black " key={each._id}><img src={each.photo} alt={each._id} className="w-[230px] h-[150px]" /><p className="text-center">{each.name}</p></div>)}</div>
+    <div className="pt-[2rem] gap-[1rem] flex flex-row flex-wrap justify-center items-center">{activity?.map(each => <div className="wrap m-7 w-[12rem] h-[auto] border-dashed border-gray-500 border-[0.2rem] pb-[0.7rem]" key={each._id}><img src={each.photo} alt={each._id} className="w-[230px] h-[150px] pb-[0.7rem]" /><p className="text-center font-semibold px-[0.3rem]">{each.name}</p></div>)}</div>
   )
 }
