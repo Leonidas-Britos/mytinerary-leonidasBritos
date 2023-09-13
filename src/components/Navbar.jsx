@@ -6,7 +6,7 @@ const { signout } = user_actions;
 
 export default function Navbar() {
   let [show, setShow] = useState(false)
-  let mail = useSelector((store)=>store.users.user?.mail);
+  let mail = useSelector((store) => store.users.user?.mail);
   let dispatch = useDispatch()
 
   return (
@@ -33,15 +33,13 @@ export default function Navbar() {
             <Anchor to="/signin">
               <p className="text-[1.7rem] text-[white] border-2 border-solid border-black rounded-[0.5rem] hover:bg-[#a97aff] hover:text-[black] group hover:text-black px-5 py-1 bg-[#4f46e5] sm:hidden" >Login</p>
             </Anchor>
-
+            <div className="sm:w-[11rem] gap-[0.5rem] h-[4rem] bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-[black] cursor-pointer" onClick={() => dispatch(signout())}>
+              <p className="sm:text-[#fff] text-[1.7rem] non-italic font-semibold no-underline group hover:text-[black]"> Sign Out</p>
+            </div>
           </div>
-
         ) : (null)}
         <img src="./public/img/my.png" alt="" className="w-[8rem] absolute right-[1.8%]
         sm:hidden" />
-
-
-
         <div className="sm:flex h-[9rem] w-[98.90vw] justify-between items-center gap-[2rem] pl-[4%] pr-[4%] border-b-[0.11em] border-[rgba(0, 0, 0, 0.233)]">
           <div className="sm:">
             <Anchor to="/home" className="sm:">
@@ -65,16 +63,6 @@ export default function Navbar() {
                 Cities
               </div>
             </Anchor>
-
-            <Anchor to="/signin" className="sm:text-[#fff] text-[1.8rem] non-italic font-semibold no-underline">
-              <div className="sm:w-[8rem] h-[4rem] bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
-                <svg className="sm:w-10 stroke-[white] group-hover:stroke-[black]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                </svg>
-                Login
-              </div>
-            </Anchor>
-
             <Anchor to="/profile" className="sm:text-[#fff] text-[1.8rem] non-italic font-semibold no-underline">
               <div className="sm:w-[8rem] h-[4rem] bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
                 <svg className="sm:w-10 stroke-[white] group-hover:stroke-[black]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -83,12 +71,27 @@ export default function Navbar() {
                 Profile
               </div>
             </Anchor>
+            {!mail && (
+              <Anchor to="/signin" className="sm:text-[#fff] text-[1.8rem] non-italic font-semibold no-underline">
+                <div className="sm:w-[8rem] h-[4rem] bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-black">
+                  <svg className="sm:w-10 stroke-[white] group-hover:stroke-[black]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                  </svg>
 
-            {mail && <span onClick={() => dispatch(signout())}>Sign Out</span>}
-            
+                  Login
+                </div>
+              </Anchor>
+            )}
+            {mail && <div className="sm:w-[11rem] gap-[0.5rem] h-[4rem] bg-[#4f46e5] border-2 border-solid border-black rounded-[1rem] flex justify-center items-center hover:bg-[#a97aff] hover:text-[black] group hover:text-[black] cursor-pointer" onClick={() => dispatch(signout())}>
+              <svg className="sm:w-10 stroke-[white] group-hover:stroke-[black]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
+              </svg>
+              <p className="sm:text-[#fff] text-[1.7rem] non-italic font-semibold no-underline group hover:text-[black]"> Sign Out</p>
+            </div>}
+
           </nav>
         </div>
       </div>
-    </header> 
+    </header>
   )
 }
