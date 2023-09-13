@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import itinerary_actions from "../store/actions/itineraries";
 const { read_itineraries_from_city } = itinerary_actions;
+import activity_actions from "../store/actions/activities";
+const { read_activities_from_itinerary } = activity_actions;
+import ActivityItinerary from "./ActivityItinerary";
 
 export default function DetailCity({ src, alt, tittle, id, description }) {
   const [show, setShow] = useState(false);
@@ -14,6 +17,10 @@ export default function DetailCity({ src, alt, tittle, id, description }) {
   const dispatch = useDispatch();
   useEffect(
     () => { dispatch(read_itineraries_from_city({ city_id: id })) },
+    []
+  )
+  useEffect(
+    () => { dispatch(read_activities_from_itinerary({ itinerary_id: id })) },
     []
   )
   return (
@@ -99,9 +106,7 @@ export default function DetailCity({ src, alt, tittle, id, description }) {
                 </div> : null}
               <button id="buttonShowActivities" onClick={() => setShowActivities(!showActivities)} className="w-[auto] h-[auto]  mx-auto  p-[1rem] border-2 text-[1rem] border-solid border-black rounded-lg font-semibold text-[1.4rem] text-white  bg-[#4f46e5] cursor-pointer hover:bg-[#a97aff] hover:text-[black]">{showActivities ? 'Hide Activities ↑' : 'View Activities ↓'}</button>
               {showActivities ?
-                <p id="pUnderConstruction" className="p-[1rem] mt-[1rem] text-[1.4rem] text-[green] font-semibold border-double border-[0.5rem] border-[green]
-                lg:p-[1rem] mt-[1rem] text-[1.4rem] text-[green] font-semibold border-double border-[0.5rem] border-[green]
-                xl:p-[1rem] mt-[1rem] text-[1.4rem] text-[green] font-semibold border-double border-[0.5rem] border-[green]">Sorry! This element is under Construction :)</p>
+                <ActivityItinerary itinerary_id={itinerary._id} />
                 : null}
             </div>
           )}
